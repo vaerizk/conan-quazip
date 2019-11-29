@@ -8,6 +8,9 @@ The recipe doesn't depend on zlib from Qt: it will install zlib as its dependenc
 
 The recipe will install Qt5 as its dependency, so it doesn't rely on any existing Qt5 installation.
 
+The recipe supports only Windows atm.
+Tested on [Windows, Visual Studio 15]
+
 Example:
 ```
 conan create <path-to-recipe> <username>/<channel>

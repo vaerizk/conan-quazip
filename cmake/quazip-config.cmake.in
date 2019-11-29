@@ -1,0 +1,7 @@
+find_package(Qt5 COMPONENTS
+	Core
+	REQUIRED
+)
+find_package(zlib REQUIRED)
+
+include("${CMAKE_CURRENT_LIST_DIR}/@QUAZIP_EXPORT_NAME@.cmake")

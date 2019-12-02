@@ -27,7 +27,7 @@ class QuaZipConan(ConanFile):
     revision_mode = "scm"
 
     generators = "cmake_paths"
-    exports = [
+    exports_sources = [
         "CMakeLists.txt",
         os.path.join("quazip", "CMakeLists.txt"),
         os.path.join("cmake", "quazip-config.cmake.in")

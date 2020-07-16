@@ -14,7 +14,7 @@ class QuaZipTestConan(ConanFile):
         return "."
 
     def build_requirements(self):
-        self.build_requires("cmake_installer/[>3.0.0]@conan/stable")
+        self.build_requires("cmake/[>3.0.0]")
 
     def build(self):
         cmake = CMake(self)

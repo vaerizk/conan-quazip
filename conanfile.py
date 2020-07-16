@@ -37,10 +37,10 @@ class QuaZipConan(ConanFile):
             raise ConanInvalidConfiguration("Only windows is supported at the moment")
 
     def build_requirements(self):
-        self.build_requires("cmake_installer/[>3.0.0]@conan/stable")
+        self.build_requires("cmake/[>3.0.0]")
 
     def requirements(self):
-        self.requires("qt/[>5.0.0]@bincrafters/stable", private=False)
+        self.requires("qt/[5.12.7]@bincrafters/stable", private=False)
         self.requires("zlib/1.2.11", private=False)
 
     def source(self):

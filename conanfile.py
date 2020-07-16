@@ -24,6 +24,7 @@ class QuaZipConan(ConanFile):
     exports_sources = [
         "CMakeLists.txt",
         os.path.join("quazip", "CMakeLists.txt"),
+        os.path.join("quazip", "quazip.rc.in"),
         os.path.join("cmake", "quazip-config.cmake.in")
     ]
     no_copy_source = True
@@ -57,6 +58,8 @@ class QuaZipConan(ConanFile):
             os.path.join(self._source_subdir_name, "quazip", "CMakeLists-original.txt")
         )
         shutil.copy(os.path.join("quazip", "CMakeLists.txt"), os.path.join(self._source_subdir_name, "quazip", "CMakeLists.txt"))
+
+        shutil.copy(os.path.join("quazip", "quazip.rc.in"), os.path.join(self._source_subdir_name, "quazip", "quazip.rc.in"))
 
         os.mkdir(os.path.join(self._source_subdir_name, "cmake"))
         shutil.copy(os.path.join("cmake", "quazip-config.cmake.in"), os.path.join(self._source_subdir_name, "cmake"))

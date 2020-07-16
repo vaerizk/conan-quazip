@@ -20,8 +20,6 @@ class QuaZipConan(ConanFile):
         "zlib:shared": False
     }
 
-    revision_mode = "scm"
-
     generators = "cmake_paths"
     exports_sources = [
         "CMakeLists.txt",

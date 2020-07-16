@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 2.8.12)
-project(PackageTest CXX)
+project(test_package CXX)
 
 find_package(quazip REQUIRED)
 
-add_executable(example example.cpp)
+add_executable(${PROJECT_NAME} example.cpp)
 
-target_link_libraries(example quazip)
+target_link_libraries(${PROJECT_NAME} quazip)

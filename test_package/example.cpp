@@ -17,8 +17,8 @@ int main() {
 	if (QDir().remove(quazip.getZipName())) {
 		std::cout << quazip.getZipName().toStdString() << " successfully removed\n";
 		return 0;
+	} else {
+		std::cout << "Something went wrong:" << quazip.getZipName().toStdString() << " has not been removed\n";
+		return 1;
 	}
-
-	std::cout << "Something went wrong:" << quazip.getZipName().toStdString() << " has not been removed\n";
-	return 1;
 }

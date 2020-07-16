@@ -1,6 +1,6 @@
 from conans import ConanFile, CMake, tools
-
 import os
+
 
 class QuaZipTestConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
@@ -19,11 +19,9 @@ class QuaZipTestConan(ConanFile):
     def build(self):
         cmake = CMake(self)
         cmake.definitions["CMAKE_TOOLCHAIN_FILE"] = os.path.join(self.build_folder, "conan_paths.cmake")
-        # Current dir is "test_package/build/<build_id>" and CMakeLists.txt is
-        # in "test_package"
         cmake.configure()
         cmake.build()
 
     def test(self):
         if not tools.cross_building(self.settings):
-            self.run(os.path.join(self._bin_dir, "example"), run_environment=True)
+            self.run(os.path.join(self._bin_dir, "test_package"), run_environment=True)

@@ -47,7 +47,7 @@ target_include_directories(${QUAZIP_TARGET_NAME}
 get_target_property(TARGET_TYPE ${QUAZIP_TARGET_NAME} TYPE)
 if(TARGET_TYPE STREQUAL "STATIC_LIBRARY")
 	target_compile_definitions(${QUAZIP_TARGET_NAME}
-		PRIVATE
+		PUBLIC
 			QUAZIP_STATIC
 	)
 else()
